@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>당첨 결과</title>
+<style>
+  body { text-align:center; font-family:sans-serif; margin-top:100px; }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+
+<h1 id="loading">🎰 당첨 확인 중...</h1>
+
+<div id="result" class="hidden">
+  <h1>🎉 1등 당첨!! 🎉</h1>
+  <p>경품: 로렉스 시계 💎</p>
+  <p>수령자: 우리 아빠 ❤️</p>
+</div>
+
+<script>
+setTimeout(() => {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("result").classList.remove("hidden");
+}, 3000);
+</script>
+
+</body>
+</html>
