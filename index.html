@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>당첨 결과</title>
-<style>
-  body { 
-    text-align:center; 
-    font-family:sans-serif; 
-    margin-top:100px; 
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>당첨 결과</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-  h1 {
-    font-size: 100px;   /* 👈 제목 크게 */
-  }
+    #loading {
+      font-size: 56px;
+      font-weight: bold;
+    }
 
-  p {
-    font-size: 80px;   /* 👈 내용 크게 */
-</style>
+    #result {
+      display: none;
+    }
+
+    #result h1 {
+      font-size: 72px;
+      margin-bottom: 20px;
+    }
+
+    #result p {
+      font-size: 38px;
+      margin: 12px 0;
+    }
+  </style>
 </head>
 <body>
 
-<h1 id="loading">🎰 당첨 확인 중...</h1>
+  <div id="loading">🎰 당첨 확인 중...</div>
 
-<div id="result" class="hidden">
-  <h1>🎉 1등 당첨!! 🎉</h1>
-  <p>경품: 로렉스 시계 💎</p>
-  <p>수령자: 우리 아빠 ❤️</p>
-</div>
+  <div id="result">
+    <h1>🎉 1등 당첨!! 🎉</h1>
+    <p>경품: 로렉스 시계 💎</p>
+    <p>수령자: 우리 아빠 ❤️</p>
+  </div>
 
-<script>
-setTimeout(() => {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("result").classList.remove("hidden");
-}, 3000);
-</script>
+  <script>
+    setTimeout(function () {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("result").style.display = "block";
+    }, 3000);
+  </script>
 
 </body>
 </html>
