@@ -1,60 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>당첨 결과</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-      color: #fff;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+<style>
+  body {
+    margin: 0;
+  }
 
-    #loading {
-      font-size: 40px;
-      font-weight: bold;
-    }
-
-    #result {
-      display: none;
-    }
-
-    #result h1 {
-      font-size: 40x;
-      margin-bottom: 20px;
-    }
-
-    #result p {
-      font-size: 38px;
-      margin: 12px 0;
-    }
-  </style>
+  img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+</style>
 </head>
 <body>
-
-  <div id="loading">🎰 당첨 확인 중...</div>
-
-  <div id="result">
-    <h1>🎉 1등 당첨!! 🎉</h1>
-    <p>경품: 로렉스 시계 💎</p>
-    <p>수령자: 이윤식 ❤️</p>
-  </div>
-
-  <script>
-    setTimeout(function () {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("result").style.display = "block";
-    }, 3000);
-  </script>
-
+  <img src="dad.jpg">
 </body>
 </html>
